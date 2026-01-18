@@ -10,58 +10,58 @@ p { text-align: center; }
 # Microsft Fabric
 ## Pipeline Paramétré
 
-![left 10%](../images/Fabric_final_x256.png)
+![left 10%](../images/Slides/Fabric_final_x256.png)
 
 
-![bg right | 50%](../images/Logo%20Pipeline.png)
+![bg right | 50%](../images/Slides/Logo%20Pipeline.png)
 
 
 ---
 
 ## Création d'un Workspace
 
-![bg left | 40%](../images/Logo%20Workspace.png)
+![bg left | 40%](../images/Slides/Logo%20Workspace.png)
 
 ---
 
 ## Création d'un Lakehouse
 
-![bg left | 60%](../images/Logo%20Lakehouse.png)
+![bg left | 60%](../images/Slides/Logo%20Lakehouse.png)
 
 
 ---
 ## Création d'une base SQL Database
-![bg left | 60%](../images/Logo%20SQL%20Database.jpeg)
+![bg left | 60%](../images/Slides/Logo%20SQL%20Database.jpeg)
 
 ---
  
 ## Création d'un Pipeline
 
-![bg left | 60%](../images/Logo%20Pipeline.png)
+![bg left | 60%](../images/Slides/Logo%20Pipeline.png)
 
 ---
 
 ## Définition des Paramètres dans un Pipeline
 
-![bg left | 50%](../images/Icon%20Parametrage.png)
+![bg left | 50%](../images/Slides/Icon%20Parametrage.png)
 
 
 ---
 
 ## Activité Copy data
-![bg left | 70%](../images/Icon%20Copy%20data.png)
+![bg left | 70%](../images/Slides/Icon%20Copy%20data.png)
 
 
 ---
 
 ## Notebook
-![bg left | 50%](../images/Logo%20Notebook.png)
+![bg left | 50%](../images/Slides/Logo%20Notebook.png)
 
 
 ---
 
 ## Procédure Stockée
-![bg left | 80%](../images/Stored%20Procedure.png)
+![bg left | 80%](../images/Slides/Stored%20Procedure.png)
 
 
  ---
@@ -69,5 +69,5 @@ p { text-align: center; }
 ## Exécution du Pipeline
 
 
-![bg left | 30%](../images/Icon%20Lecture.png)
+![bg left | 30%](../images/Slides/Icon%20Lecture.png)
 
