@@ -70,7 +70,7 @@ Cela va ouvrir une fenêtre qui depuis laquelle nous allons pouvoir renseigner l
 
 ## Création d'une base SQL Database
 
-Voyons à présent, comment créer une base de données SQL dans Microsot Fabric. Cette base sera utilisé pour utiliser l'utilisation de procédures stockées utilisant les paramètres d'un pipeline de données. 
+Voyons à présent, comment créer une base de données SQL dans Microsoft Fabric. Cette base sera utilisée pour illustrer l'utilisation de paramètres d'un pipeline de données. 
 
 Depuis l'interface du Workspace, suivre les étapes suivantes : 
 
