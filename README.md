@@ -40,15 +40,13 @@ Commençons par créer un Workspace, en suivant les étapes suivantes :
 
  1. Cliquer sur **Home** depuis la volet gauche de l'interface de Microsoft Fabric
 
- 2. CLiquer sur le bouton **+ New Workspace**
+ 2. Cliquer sur le bouton **+ New Workspace**
  3. Depuis le volet droit qui s'ouvre, entrer un nom pour ce nouveau Workspace dans le champ **Name**. Ici nous allons nommer notre Workspace **TutorialPipelineParameters**.
  4. Entrer un description dans le champ **Description** [Optionnel]
-  Cliquer sur le bouton **Create** pour lancer la création du Workspace
+ 5. Cliquer sur le bouton **Create** pour lancer la création du Workspace
   
 ![](images/Article/00%20-%20Create%20Workspace.png)
 
-
-![](images/Article/1.png)
 
 ## Création d'un Lakehouse
 
@@ -61,7 +59,7 @@ Après la création de notre Workspace, nous allons voir comment créer un Lakeh
 ![](images/Article/01%20-%20Create%20Lakehouse%20-%2000.png)
 
 
-Dans la fenêtre qui s'ouvre, nous allons paramétrer ce nouveau Lakehouse en suivant les étapes suivantes : 
+Cela va ouvrir une fenêtre qui depuis laquelle nous allons pouvoir renseigner le nom du Lakehouse à créer en suivant les étapes suivantes : 
 
 1. Entrer un nom de votre choix dans le champ **Name**
 2. Depuis le champ **Location**, s'assurer sur ce Lakehosue est positionner dans le Workspace que nous avons créé dans un premier temps.
