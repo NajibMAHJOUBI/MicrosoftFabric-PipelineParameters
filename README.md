@@ -25,7 +25,7 @@ Nous allons montrer comment définir des paramètres dans un pipeline de donnée
 
 Après avoir défini un paramètre dans un Pipeline de données qui sera utilisé dans l'ensemble des activité du Pipeline, nous allons : 
 
-1. Extraire les données d'une API Rest avec une activité Copy data. L'API est intérogé en utilisant le paramètre du pipi=eline pour paramétriser l'url envoyé à l'API. Les données téléchargées seront stockées dans un Lakehouse
+1. Extraire les données d'une API Rest avec une activité Copy data. L'API est interrogé en utilisant le paramètre du pipeline pour paramétriser l'url envoyé à l'API. Les données téléchargées seront stockées dans un Lakehouse
 
 2. Utiliser un notebook Python pour transformer les données
 
@@ -50,7 +50,7 @@ Commençons par créer un Workspace, en suivant les étapes suivantes :
 
 ## Création d'un Lakehouse
 
-Après la création de notre Workspace, nous allons voir comment créer un Lakehouse de données pour stocker les différents fichiers qui seront manipuler dans ce tutorial. Depuis l'interface de notre Workspsapce, suivre les étape suivante : 
+Après la création de notre Workspace, nous allons voir comment créer un Lakehouse de données pour stocker les différents fichiers qui seront manipuler dans ce tutorial. Depuis l'interface de notre Workspace, suivre les étape suivante : 
 
 1. Cliquer sur le bouton **+ New item**
 2. Depuis le volet droit qui s'ouvre, taper le terme "*Lakehouse*" dans le champ de recherche
@@ -62,7 +62,7 @@ Après la création de notre Workspace, nous allons voir comment créer un Lakeh
 Cela va ouvrir une fenêtre qui depuis laquelle nous allons pouvoir renseigner le nom du Lakehouse à créer en suivant les étapes suivantes : 
 
 1. Entrer un nom de votre choix dans le champ **Name**
-2. Depuis le champ **Location**, s'assurer sur ce Lakehosue est positionner dans le Workspace que nous avons créé dans un premier temps.
+2. Depuis le champ **Location**, s'assurer sur ce Lakehouse est positionner dans le Workspace que nous avons créé dans un premier temps.
 3. Cliquer sur le bouton **Create** pour lancer la création de ce **Lakehouse**
 
 ![](images/Article/02%20-%20Create%20Lakehouse%20-%2001.png)
@@ -75,32 +75,32 @@ Voyons à présent, comment créer une base de données SQL dans Microsoft Fabri
 Depuis l'interface du Workspace, suivre les étapes suivantes : 
 
 1. Cliquer sur le bouton **+ New item**
-2. Dans le champ de rechercer, taper le terme *SQL*
+2. Dans le champ de recherche, taper le terme *SQL*
 3. Sélectionner l'icône **SQL Database**
 
 ![](images/Article/02%20-%20Create%20SQL%20Database%20-%2000.png)
 
-Cela va ouvrir la fenêtre **New SQL database** et suivre les étapes suivantes :
+Cela va ouvrir une fenêtre **New SQL database** et suivre les étapes suivantes :
 
-1. Entrer un nom pour cette nouvelle base de données dans le champ **Name**
+1. Entrer un nom pour cette nouvelle base de données dans le champ **Name**. Dans notre exemple, nous nommons cette base : SQL *PipelineParameters_SQL*.
 2. Cliquer sur le bouton **Create** pour lancer la création de la base de données. 
 
 ![](images/Article/02%20-%20Create%20SQL%20Database%20-%2001.png)
 
 ## Création d'un Pipeline
 
-La procaine étape va consister à créer un Pipeline de données. Pour cela, vous allez pouvoir suivre les étpaes suivantes :
+La prochaine étape va consister à créer un Pipeline de données. Pour cela, vous allez pouvoir suivre les étapes suivantes :
 
-1. Revenir dans l'interface du Worspace que nous avons créé précédemment
+1. Revenir dans l'interface du Workspace que nous avons créé précédemment
 2. Cliquer sur le bouton **+ New item**
-3. Dans le volet droit qui s'ouvre, taper le terme **Pipelibe** dans le champ de recherche
+3. Dans le volet droit qui s'ouvre, taper le terme **Pipeline** dans le champ de recherche
 4. Cliquer sur l'icône du **Pipeline**
 
-![](images/Article/03%20-%20Create%20Pipeline%20-%2000.png)
+![Création du Pipeline](images/Article/03%20-%20Create%20Pipeline%20-%2000.png)
 
-Cela va ouvrir la fenêtre qui va apermettre de nommer ce Pipeline en suivant les étapes suivantes :
+Cela va ouvrir la fenêtre qui va permettre de nommer ce Pipeline en suivant les étapes suivantes :
 
-1. Depuis la fenêtre **New Pipeline**, entrer un nom de votre choix dans le champ *Name*. ici nous le nommons *PipelineParameters*
+1. Depuis la fenêtre **New Pipeline**, entrer un nom de votre choix dans le champ **Name**. ici nous le nommons *PipelineParameters*
 2. Cliquer sur le bouton **Create** pour lancer la création de ce **Pipeline**.
 
 ![](images/Article/03%20-%20Create%20Pipeline%20-%2001.png)
@@ -111,29 +111,77 @@ A présent, nous allons voir comment définir un paramètre au niveau du **Pipel
 
 Depuis l'interface du **Pipeline**, suivre les étapes suivantes : 
 
-1. CVliquer sur le bouton **Paramètres**. Cela va ouvrir un volet droit sur la page.
+1. Cliquer sur le bouton **Paramètres**. Cela va ouvrir un volet droit sur la page.
 2. Cliquer sur la croix **x** pour fermer ce volet droit
+3. Redimensionner le menu du bas pour à ce volet
 
 
 ![](images/Article/04%20-%20Define%20Parameters%20-%2000.png)
 
 Dans le champ du bas du **Pipeline**, nous allons pouvoir inscrire les paramètres souhaités de la façon suivante :
 
-1. Aller dans le menu **Paramètres**
-2. Cliquer sur **+ New** pour ajouter un paramètre
-3.
-
+1. Aller dans le menu **Settings**
+2. Cliquer sur **+ New** pour ajouter un paramètre et définir ses caractéristiques
+3. Dans le champ **Name**, entrer un nom pour le paramètre. Ici le paramètre est nommé *name*.
+4. Dans la champ **Type**, choisir le type souhaité pour ce paramètre. Ici le type de paramètre est choisi de type *String*.
+5. Dans le champ **Default value**, définir une valeur par défaut si souhaité. Ici nous définissons *canada* comme valeur par défaut.
 
 
 ![](images/Article/04%20-%20Define%20Parameters%20-%2001.png)
 
 ## Utilisation de Paramètres dans une activité Copy data
 
-![](images/Article/05%20-%20Add%20Copy%20Data%20-%2000.png)
-
-![](images/Article/05%20-%20Add%20Copy%20Data%20-%2001.png)
+L'ajout d'une activité Copy data au Pipeline e donénes se fait de la façon suivante depuis sn interface :
 
 
+![Aout d'une activité Copy data](images/Article/05%20-%20Add%20Copy%20Data%20-%2000.png)
+
+
+
+### Activité Copy data : menu *General*
+
+Depuis le menu **General**, définir les pramètres de la façon suivante : 
+
+![Aout d'une activité Copy data](images/Article/05.02%20-%20Activité%20Copy%20data%20-%20menu%20General.png)
+
+
+### Activité Copy data : menu *Source*
+
+#### Activité Copy data : menu *Source* - Paramètre *Connection*
+
+![Aout d'une activité Copy data](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2000.png)
+
+![Aout d'une activité Copy data](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2001.png)
+
+![Aout d'une activité Copy data](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2002.png)
+
+
+#### Activité Copy data : menu *Source* - Paramètre *Relative URL*
+
+![Aout d'une activité Copy data](images/Article/05.04%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Relative%20URL%2000.png)
+
+![Aout d'une activité Copy data](images/Article/05.04%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Relative%20URL%2001.png)
+
+#### Activité Copy data : menu *Source* - Paramètre *File format*
+
+![Aout d'une activité Copy data](images/Article/05.05%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20File%20format.png)
+
+### Activité Copy data : menu *Destination*
+#### Activité Copy data : menu *Destination* - Paramètre *Connection*
+
+![](<images/Article/05.06 - Activité Copy data - menu Destination - Param Connection 00.png>)
+
+![](<images/Article/05.06 - Activité Copy data - menu Destination - Param Connection 01.png>)
+
+#### Activité Copy data : menu *Destination* - Paramètre *File path*
+
+![alt text](<images/Article/05.07 - Activité Copy data - menu Destination - Param File path 00.png>)
+
+![alt text](<images/Article/05.07 - Activité Copy data - menu Destination - Param File path 01.png>)
+
+#### Activité Copy data : menu *Destination* - Paramètre *File format*
+
+![alt text](<images/Article/05.08 - Activité Copy data - menu Destination - Param File format.png>)
 
 
 ## Utilisation de Paramètre dans un Notebook
