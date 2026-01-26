@@ -15,6 +15,20 @@ Les paramètres rendent les pipelines plus dynamiques notamment en permettant :
 - **Maintenance simplifiée** : Modifier le comportement d'un pipeline sans altérer le code
 
 
+## Scénario
+
+Nous allons montrer comment définir des paramètres dans un pipeline de données puis les utiliser dans différents types de flux de données :
+
+- Activité Copy Data
+- Notebook Python
+- Procédure Stockée
+
+Après avoir défini un paramètre dans un Pipeline de données qui sera utilisé dans l'ensemble des activité du Pipeline, nous allons : 
+
+1. Extraire les données d'une API Rest avec une activité Copy data. L'API est intérogé en utilisant le paramètre du pipi=eline pour paramétriser l'url envoyé à l'API. Les données téléchargées seront stockées dans un Lakehouse
+
+2. Utiliser un notebook Python pour transformer les données
+
 
 
 
@@ -74,13 +88,41 @@ Cela va ouvrir la fenêtre **New SQL database** et suivre les étapes suivantes 
 
 ## Création d'un Pipeline
 
+La procaine étape va consister à créer un Pipeline de données. Pour cela, vous allez pouvoir suivre les étpaes suivantes :
+
+1. Revenir dans l'interface du Worspace que nous avons créé précédemment
+2. Cliquer sur le bouton **+ New item**
+3. Dans le volet droit qui s'ouvre, taper le terme **Pipelibe** dans le champ de recherche
+4. Cliquer sur l'icône du **Pipeline**
+
 ![](images/Article/03%20-%20Create%20Pipeline%20-%2000.png)
+
+Cela va ouvrir la fenêtre qui va apermettre de nommer ce Pipeline en suivant les étapes suivantes :
+
+1. Depuis la fenêtre **New Pipeline**, entrer un nom de votre choix dans le champ *Name*. ici nous le nommons *PipelineParameters*
+2. Cliquer sur le bouton **Create** pour lancer la création de ce **Pipeline**.
 
 ![](images/Article/03%20-%20Create%20Pipeline%20-%2001.png)
 
 ## Définition des Paramètres dans un Pipeline
 
+A présent, nous allons voir comment définir un paramètre au niveau du **Pipeline** de données. Ce paramètre va nous permettre d'illustrer les propos de cet article dans les étapes suivantes.
+
+Depuis l'interface du **Pipeline**, suivre les étapes suivantes : 
+
+1. CVliquer sur le bouton **Paramètres**. Cela va ouvrir un volet droit sur la page.
+2. Cliquer sur la croix **x** pour fermer ce volet droit
+
+
 ![](images/Article/04%20-%20Define%20Parameters%20-%2000.png)
+
+Dans le chaamp du bas du **Pipeline**, nous allons pouvoir inscrire les paramètres souhaités de la façon suivante :
+
+1. Aller dans le menu **Paramètres**
+2. Cliquer sur **+ New** pour ajouter un paramètre
+3.
+
+
 
 ![](images/Article/04%20-%20Define%20Parameters%20-%2001.png)
 
