@@ -47,6 +47,9 @@ Commençons par créer un Workspace, en suivant les étapes suivantes :
   
 ![](images/Article/00%20-%20Create%20Workspace.png)
 
+
+![](images/Article/1.png)
+
 ## Création d'un Lakehouse
 
 Après la création de notre Workspace, nous allons voir comment créer un Lakehouse de données pour stocker les différents fichiers qui seront manipuler dans ce tutorial. Depuis l'interface de notre Workspsapce, suivre les étape suivante : 
@@ -116,7 +119,7 @@ Depuis l'interface du **Pipeline**, suivre les étapes suivantes :
 
 ![](images/Article/04%20-%20Define%20Parameters%20-%2000.png)
 
-Dans le chaamp du bas du **Pipeline**, nous allons pouvoir inscrire les paramètres souhaités de la façon suivante :
+Dans le champ du bas du **Pipeline**, nous allons pouvoir inscrire les paramètres souhaités de la façon suivante :
 
 1. Aller dans le menu **Paramètres**
 2. Cliquer sur **+ New** pour ajouter un paramètre
