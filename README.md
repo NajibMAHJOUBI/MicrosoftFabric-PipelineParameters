@@ -127,7 +127,7 @@ Dans le champ du bas du **Pipeline**, nous allons pouvoir inscrire les paramètr
 5. Dans le champ **Default value**, définir une valeur par défaut si souhaité. Ici nous définissons *canada* comme valeur par défaut.
 
 
-![Menu Parameters - Paramétrage](images/Article/04%20-%20Define%20Parameters%20-%2001.png)
+![](images/Article/04%20-%20Define%20Parameters%20-%2001.png)
 
 ## Utilisation de Paramètres dans une activité Copy data
 
