@@ -113,75 +113,143 @@ Depuis l'interface du **Pipeline**, suivre les étapes suivantes :
 
 1. Cliquer sur le bouton **Paramètres**. Cela va ouvrir un volet droit sur la page.
 2. Cliquer sur la croix **x** pour fermer ce volet droit
-3. Redimensionner le menu du bas pour à ce volet
+3. Redimensionner le menu du bas vers le haut
 
 
 ![](images/Article/04%20-%20Define%20Parameters%20-%2000.png)
 
 Dans le champ du bas du **Pipeline**, nous allons pouvoir inscrire les paramètres souhaités de la façon suivante :
 
-1. Aller dans le menu **Settings**
+1. Aller dans le menu **Parameters**
 2. Cliquer sur **+ New** pour ajouter un paramètre et définir ses caractéristiques
 3. Dans le champ **Name**, entrer un nom pour le paramètre. Ici le paramètre est nommé *name*.
-4. Dans la champ **Type**, choisir le type souhaité pour ce paramètre. Ici le type de paramètre est choisi de type *String*.
+4. Dans le champ **Type**, choisir le type souhaité pour ce paramètre. Ici le type de paramètre est choisi de type *String*.
 5. Dans le champ **Default value**, définir une valeur par défaut si souhaité. Ici nous définissons *canada* comme valeur par défaut.
 
 
-![](images/Article/04%20-%20Define%20Parameters%20-%2001.png)
+![Menu Parameters - Paramétrage](images/Article/04%20-%20Define%20Parameters%20-%2001.png)
 
 ## Utilisation de Paramètres dans une activité Copy data
 
-L'ajout d'une activité Copy data au Pipeline e donénes se fait de la façon suivante depuis sn interface :
+Nous allons commencer par montrer comment utiliser un Paramètre du Pipeline de données dans un flux de données Copy data. 
+L'ajout d'une activité Copy data au Pipeline de données se fait de la façon suivante depuis l'interface du **Pipeline**:
 
+1. Depuis le menu, cliquer sur **Add copy data activity** ce qui va l'ajouter au canevas du **Pipeline**
+2. Dans les prochaines étapes, nous allons montrer comment définir les différents paramètres de cette activité depuis ce menu.
 
-![Aout d'une activité Copy data](images/Article/05%20-%20Add%20Copy%20Data%20-%2000.png)
-
+![Activité Copy data - Menu General](images/Article/05.01%20-%20Activité%20Copy%20Data%20-add%20new%20Copy%20data%20activity.png)
 
 
 ### Activité Copy data : menu *General*
 
-Depuis le menu **General**, définir les pramètres de la façon suivante : 
+Depuis le menu **General**, définir les paramètres de la façon suivante : 
 
-![Aout d'une activité Copy data](images/Article/05.02%20-%20Activité%20Copy%20data%20-%20menu%20General.png)
+1. Cliquer sur le menu **General**
+1. Dans le champ **Name**, donner un nom à cette activité **Copy data**. Ici l'activité est nommée *Request Countries* 
+
+![Activité Copy data - Menu General](images/Article/05.02%20-%20Activité%20Copy%20data%20-%20menu%20General.png)
 
 
 ### Activité Copy data : menu *Source*
 
+Nous allons définir la source des données de cette activité **Copy data**.
+
 #### Activité Copy data : menu *Source* - Paramètre *Connection*
 
-![Aout d'une activité Copy data](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2000.png)
+Pour commencer cette étape, nous allons définir le type de connexion : 
 
-![Aout d'une activité Copy data](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2001.png)
+1. Sélectionner le menu **Source**
+2. Développer le menu déroulant du champ **Connection** 
+2. Cliquer sur l'option **Browse all**
 
-![Aout d'une activité Copy data](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2002.png)
+![Activité Copy data - Menu Source -Paramètre Connection 0](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2000.png)
+
+Cela va ouvrir la fenêtre **Choose a data source to get started** dans laquelle vous allez devoir réaliser les étapes suivantes : 
+
+1. Dans le champ de recherche, taper le terme *http*
+2. Choisir l'option **Htpp - Other** dans le champ **New sources**
+
+![Activité Copy data - Menu Source -Paramètre Connection 1](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2001.png)
+
+Cela va ouvrir la fenêtre **Connect data source** dans laquelle vous allez pouvoir définir les paramètres de cette connexion *htttp* en suivant les étapes suivantes : 
+
+1. Renseigner l'adresse de l'API [Restcountries](https://restcountries.com/v3.1/name/) dans le champ **Url**. 
+2. Cliquer sur le bouton **Connect**
+
+![Activité Copy data - Menu Source -Paramètre Connection 2](images/Article/05.03%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Connection%2002.png)
 
 
 #### Activité Copy data : menu *Source* - Paramètre *Relative URL*
 
-![Aout d'une activité Copy data](images/Article/05.04%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Relative%20URL%2000.png)
+Toujours depuis le menu **Source**, nous allons définir le paramétrages de l'appel à cette API. Pour cela, suivre les étapes suivantes : 
 
-![Aout d'une activité Copy data](images/Article/05.04%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Relative%20URL%2001.png)
+1. Cliquer dans le champ **Relative URL**
+2. Cliquer sur le lien **Add dynamic content [Alt+Shift+D]**.
+
+![Activité Copy data - Menu Source - Paramètre Relative URL 1](images/Article/05.04%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Relative%20URL%2000.png)
+
+Cela va ouvrir la fenêtre **Pipeline expression builder** qui va permettre de construire le paramétrage dynamiquement en suivant les étapes suivantes :
+
+1. Choisir le menu **Parameters** ce qui va permettre d'afficher les paramètres définis dans le **Pipeline** de données
+2. Choisir le paramètre *name* que nous avons définis précédemment dans le Pipeline
+3. Dans la fenêtre, on voit s'afficher l'expression construite par ses actions. On retrouve ici l'appel du paramètre *name* : ```@pipeline().parameters.name```
+4. Cliquer sur le bouton **OK** pour fermer cette fenêtre.
+
+![Activité Copy data - Menu Source - Paramètre Relative URL 2](images/Article/05.04%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20Relative%20URL%2001.png)
 
 #### Activité Copy data : menu *Source* - Paramètre *File format*
 
-![Aout d'une activité Copy data](images/Article/05.05%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20File%20format.png)
+Enfin pour terminer, vous allez pouvoir le type de fichier qui sera téléchargé de la façon suivante : 
+
+1. Depuis le champ **File format**, définir le type de fichier attendu. Ici, nous allons récupérer des fichier de type *JSON* depuis l'API [Rest Countries](https://restcountries.com/v3.1/name/).
+
+![Activité Copy data - Menu Source - Paramètre File format](images/Article/05.05%20-%20Activité%20Copy%20data%20-%20menu%20Source%20-%20Param%20File%20format.png)
 
 ### Activité Copy data : menu *Destination*
+
+Depuis le menu **Destination**, nous allons pouvoir l'endroit où stocker le fichier téléchargé de l'API.
+
 #### Activité Copy data : menu *Destination* - Paramètre *Connection*
 
-![](<images/Article/05.06 - Activité Copy data - menu Destination - Param Connection 00.png>)
+Pour choisir où stocker le fichier téléchargé, il va falloir commencer par choisir la *Lakehouse* que nous avons créé en suivant les étapes suivantes : 
 
-![](<images/Article/05.06 - Activité Copy data - menu Destination - Param Connection 01.png>)
+1. Cliquer sur le menu **Destination**
+2. Cliquer sur le champ **Connection** ce qui va ouvrir le menu déroulant.
+3. Cliquer sur l'option **Browse all**
+
+![Activité Copy data - Menu Destination - Paramètre Connection 0](<images/Article/05.06 - Activité Copy data - menu Destination - Param Connection 00.png>)
+
+Cela va ouvrir la fenêtre **Choose a destination** : 
+
+1. Choisir le *Lakehouse* que nous avons créé précédemment
+
+![Activité Copy data - Menu Destination - Paramètre Connection 1](<images/Article/05.06 - Activité Copy data - menu Destination - Param Connection 01.png>)
 
 #### Activité Copy data : menu *Destination* - Paramètre *File path*
 
-![alt text](<images/Article/05.07 - Activité Copy data - menu Destination - Param File path 00.png>)
+Nous allons  poursuivre de la façon suivante : 
 
-![alt text](<images/Article/05.07 - Activité Copy data - menu Destination - Param File path 01.png>)
+1. Dans le champ **Root folder**, choisir l'option **Files**
+2. Dans le champ **File path**, vous allez pouvoir définir le chemin de stockage du fichier. Inscrire le nom du répertoire souhaité dans le premier champ. Dans notre exemple, nous allons les stocker dans un répertoire nommé *JSON*.
+3. Sélectionner le deuxième champ depuis le champ **File path**. 
+4. Cliquer sur le lien **Add dynamic content [Alt+Shift+D]**. 
+
+![Activité Copy data - Menu Destination - Paramètre File path 0](<images/Article/05.07 - Activité Copy data - menu Destination - Param File path 00.png>)
+
+Cela va ouvrir la fenêtre **Pipeline expression builder** qui va permettre de construire l'expression définissant le nom du fichier : 
+
+1. Dans la fenêtre, nous allez pouvoir entrer l'expression suivante ```@concat(pipeline().parameters.name, '.json')```. LA fonction ```@concat()``` permet de concaténer des chaînes de caractères. Dans cette expression,nous réutilisons le paramètre défini dans le **Pipeline** comme nom du fichier avec une extension *JSON*.
+2. Cliquer sur le bouton **OK** pour fermer cette fenêtre.
+
+![Activité Copy data - Menu Destination - Paramètre File path 1](<images/Article/05.07 - Activité Copy data - menu Destination - Param File path 01.png>)
 
 #### Activité Copy data : menu *Destination* - Paramètre *File format*
 
-![alt text](<images/Article/05.08 - Activité Copy data - menu Destination - Param File format.png>)
+Enfin il reste à définir le format de stockage des fichiers à télécharger : 
+
+1. Depuis le champ **File format**, utiliser le menu déroulant et choisir *JSON* comme format de stockage 
+
+![Activité Copy data - Menu Destination - Paramètre File path 2](<images/Article/05.08 - Activité Copy data - menu Destination - Param File format.png>)
 
 
 ## Utilisation de Paramètre dans un Notebook
