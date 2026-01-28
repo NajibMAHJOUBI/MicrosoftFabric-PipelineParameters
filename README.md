@@ -253,6 +253,34 @@ Enfin il reste à définir le format de stockage des fichiers à télécharger :
 
 
 ## Utilisation de Paramètre dans un Notebook
+
+### Mise en place d'un Notebook - Python
+#### Création du Notebook
+![alt text](<images/Article/Notebook/06.01 Create Notebook 00.png>)
+![alt text](<images/Article/Notebook/06.01 Create Notebook 01.png>)
+
+#### Association d'un Lakehouse
+![alt text](<images/Article/Notebook/06.02 Add Lakehouse 00.png>)
+![alt text](<images/Article/Notebook/06.02 Add Lakehouse 01.png>)
+
+#### Mise en place du code Python
+![alt text](<images/Article/Notebook/06.03 Python Notebook 00.png>)
+![alt text](<images/Article/Notebook/06.03 Python Notebook 01.png>)
+
+#### Définition d'un paramètre
+![alt text](<images/Article/Notebook/06.04 Toggle Parameter Cell.png>)
+
+### Mise en place d'une activité Notebook
+
+#### Ajout d'une activité Notebook au Pipeline
+![alt text](<images/Article/Notebook/06.05 Add Notebook Activity.png>)
+
+#### Activité Notebook - Menu General
+![alt text](<images/Article/Notebook/06.06 Notebook Activity - Menu General.png>)
+
+#### Activité Notebook - Menu Settings
+![alt text](<images/Article/Notebook/06.06 Notebook Activity - Menu Settings.png>)
+
 ## Utilisation de Paramètre dans une Procédure Stockée
 
 
