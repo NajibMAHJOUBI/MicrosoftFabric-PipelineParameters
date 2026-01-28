@@ -253,9 +253,25 @@ Enfin il reste à définir le format de stockage des fichiers à télécharger :
 
 ## Utilisation de Paramètre dans un Notebook
 
+A présent, nous allons voir comment mettre en place un notebook qui utilisera les paramètres définis dans un **Pipeline Data Factory**
+
 ### Mise en place d'un Notebook - Python
 #### Création du Notebook
+
+La création d'un notebook peut se faire depuis l'interface du **Workspace** en suivant les étapes suivantes : 
+
+1. Cliquer sur le bouton **+ Nw item** 
+2. Dans le volet droit, taper le terme *notebook* dans le champ de recherche
+3. Sélectionner l'icône **Notebook** pour en créer un.
+
 ![alt text](<images/Article/Notebook/06.01 Create Notebook 00.png>)
+
+Cela va ouvrir une fenêtre **New Notebook**  permettant de nommer ce **Notebook** en suivant les étapes suivantes :
+
+1. Dans le champ **Name**, inscrire un nom de votre choix pour ce **Notebook**. Dans notre exemple, le **Notebook** est nommé *Parse Country JSON*
+2. S'assurer que ce **Notebook** est bien associé au **Workspace** que nous avons créé dans ce tutoriel.
+3. Cliquer sur le bouton **Create** pour finaliser la création de ce **Notebook**.
+
 ![alt text](<images/Article/Notebook/06.01 Create Notebook 01.png>)
 
 #### Association d'un Lakehouse
