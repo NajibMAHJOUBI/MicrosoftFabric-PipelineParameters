@@ -39,10 +39,9 @@ Pour illustrer les propos de cet article, nous allons mettre en place un environ
 Commençons par créer un Workspace, en suivant les étapes suivantes : 
 
  1. Cliquer sur **Home** depuis la volet gauche de l'interface de Microsoft Fabric
-
  2. Cliquer sur le bouton **+ New Workspace**
  3. Depuis le volet droit qui s'ouvre, entrer un nom pour ce nouveau Workspace dans le champ **Name**. Ici nous allons nommer notre Workspace **TutorialPipelineParameters**.
- 4. Entrer un description dans le champ **Description** [Optionnel]
+ 4. Entrer une description dans le champ **Description** [Optionnel]
  5. Cliquer sur le bouton **Create** pour lancer la création du Workspace
   
 ![](images/Article/00%20-%20Create%20Workspace.png)
