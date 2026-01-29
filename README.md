@@ -275,14 +275,48 @@ Cela va ouvrir une fenêtre **New Notebook**  permettant de nommer ce **Notebook
 ![alt text](<images/Article/Notebook/06.01 Create Notebook 01.png>)
 
 #### Association d'un Lakehouse
+
+Ce notebook doit être associé à notre Workspace et va venir manipuler les fichiers qui sont stockés dans notre Lakehouse.
+Pour cela, vous allez devoir suivre les étapes suivantes depuis l'interface du **Notebook** que nous venons de créer :
+
+1. Depuis le volet **Explorer**, cliquer sur le bouton **Add data items**
+2. Choisir l'option **New lakehouse**
+
 ![alt text](<images/Article/Notebook/06.02 Add Lakehouse 00.png>)
+
+Cela va ouvrir une fen^tre dans laquelle vous pourrez choisir les données à associer à ce **Notebook**. 
+
+1. Choisir le **Lakehouse** que nous avons créé précédemment *PipelineParameters_LK*
+2. Cliquer sur le bouton *Connect*
+
 ![alt text](<images/Article/Notebook/06.02 Add Lakehouse 01.png>)
 
 #### Mise en place du code Python
+
+Dans notre exemple, nous allons utiliser Python pour transformer les fichiers JSON que nous avons téléchargé précédemment avec l'activité Copy data. L'objectif est de lire un fichier JSON et en extraire les données qui seront stockés sous la forme de table dans des fichiers CSV.
+
+
+Étant donné la faible volumétrie des données à manipuler, nous allons utiliser un kernel Python (par défaut les notebooks sont paramétré pour exécutés avec PySPark). Pour indiquer que nous souhaitons réaliser nos calculs depuis un kernel Python, vous allez devoir le faire de la façon suivante : 
+
+1. Cliquer et choisir l'option **Python** 
+
 ![alt text](<images/Article/Notebook/06.03 Python Notebook 00.png>)
+
+Afin de simplifier les propos et se focaliser sur le sujet principale de ce tutoriel, nous avons limiter ce Notebook à trois cellules. 
+
+1. Import des librairies Python **json** et **pandas**
+2. Déclaration d'une variable de type string. Elle servira par la suite de pont avec la variable définie dans le Pipeline de données
+3. Réalisation du parsing du fichier JSON et enregistrement sous la forme de CSV du résultat
+
 ![alt text](<images/Article/Notebook/06.03 Python Notebook 01.png>)
 
-#### Définition d'un paramètre
+#### Définition d'un paramètre dans un Notebook
+
+Pour pouvoir piloter la valuer d'un paramètre dans un notebook depuis le **Pipeline**, il vz falloir le préciser dans la configuration du pramaètre. Cela doit se faire depusi la cellule dans lequelle ce paramètre a été défini de la daçon suivante : 
+
+1. PAsser la pointeur de la souros dans le coi gaiche de la cdellule et cliquer sur les **trois points**
+2. Dans les options roposées, chosiir **Toggle parameter cell**
+
 ![alt text](<images/Article/Notebook/06.04 Toggle Parameter Cell.png>)
 
 ### Mise en place d'une activité Notebook
